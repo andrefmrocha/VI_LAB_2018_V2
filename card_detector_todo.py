@@ -112,7 +112,7 @@ while True:
         
         
         # Discard matches that failed the ratio test 
-        if condition:
+        if m.distance < 0.75 * n.distance:
             goodMatch.append([m])
             matchesMask[i]=[1,0]
 
