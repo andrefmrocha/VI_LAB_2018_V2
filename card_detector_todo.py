@@ -87,7 +87,7 @@ while True:
     ######################
     ### YOUR CODE HERE ###
     ######################
-    
+    matches = flann.knnMatch(card_desc, video_desc, k=2)
     
     # Need to draw only good matches, so create a mask
     matchesMask = [[0,0] for i in range(len(matches))]
