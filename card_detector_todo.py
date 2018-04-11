@@ -20,7 +20,7 @@ search_params       = dict(checks=50) # or use {}
 flann = cv2.FlannBasedMatcher(flannParam, search_params)
 
 # Read the template image
-card_img = cv2.imread(CARD_IMG_FN,0)
+card_img = cv2.imread(CARD_IMG_FN, 0)
 
 """
 TODO: Detect key-points on the template image using SIFT algorithm.
@@ -35,6 +35,7 @@ Hint: check sift.detectAndCompute()
 ### YOUR CODE HERE ###
 ######################
 
+card_kpts, card_desc = sift.detectAndCompute(card_img, None)
 
 # Draw key-points
 if VERBOSE:
