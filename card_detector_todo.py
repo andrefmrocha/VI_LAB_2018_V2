@@ -72,7 +72,7 @@ while True:
     ######################
     ### YOUR CODE HERE ###
     ######################
-    
+    video_kpts, video_desc = sift.detectAndCompute(video_img_gray, None)
     
     """
     TODO: Match key-point descriptors between the two images, using FLANN algorithm. 
