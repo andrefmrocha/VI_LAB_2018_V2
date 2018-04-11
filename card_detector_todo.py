@@ -174,7 +174,8 @@ while True:
         ######################
         ### YOUR CODE HERE ###
         ######################
-        
+        card_corners = np.float32([[0, 0], [0, h-1], [w-1, h-1], [w-1, 0]]).reshape(-1,1,2)
+        card_corners_video = cv2.perspectiveTransform(card_corners, H)
         
         cv2.polylines(video_img_bgr, [np.int32(card_corners_video)], True, (0,255,0), 5)
     else:
