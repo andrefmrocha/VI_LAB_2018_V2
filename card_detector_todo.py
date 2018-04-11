@@ -156,7 +156,7 @@ while True:
         ######################
         ### YOUR CODE HERE ###
         ######################
-
+        H, mask = cv2.findHomography(qp, tp, cv2.RANSAC, 5.0)
 
         # Height and width of the card in the query image
         h, w = card_img.shape
